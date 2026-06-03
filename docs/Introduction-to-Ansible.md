@@ -15,10 +15,7 @@
 - [Key Concepts](#key-concepts)
 - [Installation](#installation)
 - [Your First Ansible Command](#your-first-ansible-command)
-- [Inventory File](#inventory-file)
-- [Your First Playbook](#your-first-playbook)
 - [Idempotency Explained](#idempotency-explained)
-- [Next Steps](#next-steps)
 ---
 
 ## What is Ansible?
@@ -83,3 +80,18 @@ sudo apt install ansible
 brew install ansible
 ```
 ### Verify Installation
+```bash
+ansible --version
+```
+### Your First Ansible Command
+```bash
+# Test connectivity to all hosts
+ansible all -m ping
+
+# Run a command on web servers
+ansible webservers -m command -a "uptime"
+```
+### Idempotency Explained
+Ansible is **idempotent** — running the same playbook 10 times will not create 10 copies of a file or restart a service unnecessarily.
+This is one of Ansible’s most powerful features.
+
