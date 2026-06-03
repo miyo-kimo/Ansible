@@ -83,7 +83,8 @@ brew install ansible
 ```bash
 ansible --version
 ```
-### Your First Ansible Command
+---
+## Your First Ansible Command
 ```bash
 # Test connectivity to all hosts
 ansible all -m ping
@@ -91,7 +92,8 @@ ansible all -m ping
 # Run a command on web servers
 ansible webservers -m command -a "uptime"
 ```
-### Idempotency Explained
+---
+## Idempotency Explained
 Ansible is **idempotent** — running the same playbook 10 times will not create 10 copies of a file or restart a service unnecessarily.
 This is one of Ansible’s most powerful features.
 
